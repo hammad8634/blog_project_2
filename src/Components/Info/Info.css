@@ -1,0 +1,23 @@
+.button {
+  border: 2px solid blue;
+  color: blue;
+  border-radius: 0;
+  text-decoration: none;
+}
+.button:hover {
+  border: 2px solid rgb(2, 2, 49);
+  color: rgb(2, 2, 49);
+}
+.bordr56 {
+  border: 2px solid black !important;
+  transform: rotate(20deg); 
+}
+.border-hovered{
+  border: 2px solid rgb(2, 2, 49);
+}
+@media (min-width:768px) {
+  .bordr{
+
+    border-right: 1px solid black !important;
+  }
+}

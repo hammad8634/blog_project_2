@@ -1,0 +1,36 @@
+.img-size{
+    height: 15rem;
+    width: 15rem;
+    border-bottom: 4px solid rgb(146, 145, 145);
+}
+.img-size:hover{
+    transform: scale(1.1);
+    border-bottom: 4px solid rgb(15, 74, 190);
+
+}
+.image-container {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px; /* Adjust the desired height of the border */
+    background-color: gray;
+    transition: width 0.5s, background-color 1.5s;
+  }
+  
+  .image-container:hover::after {
+    width: 100%;
+    background-color: blue; /* Adjust the desired color of the border */
+  }
+  .imgsize{
+    width: 21.5rem;
+  }
+ 
+  

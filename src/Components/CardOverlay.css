@@ -1,0 +1,9 @@
+.txt1-size{
+    font-size: 4rem !important;
+}
+@media  (max-width: 400px) {
+
+  .txt1-size{
+    font-size: 2rem !important;
+}
+}

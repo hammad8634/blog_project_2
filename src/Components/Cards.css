@@ -1,0 +1,57 @@
+.card {
+  overflow: hidden;
+}
+
+.card-body {
+  border: 0%;
+}
+.card img {
+  position: relative;
+  border-bottom: 5px solid grey;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.card img:hover {
+  border-color: rgb(11, 65, 205);
+}
+
+.card img:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(11, 65, 205);
+  transition: width 4s ease-in-out;
+}
+
+.card img:hover:before {
+  width: 100%;
+}
+
+.card-img-top {
+  /* transition: transform 600ms ease 0s; */
+  /* transition: transform 4s ease-in-out; */
+  transition: transform 0.5s ease-in-out;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+.card-title {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-text {
+  color: black;
+}
+.card:hover h5 {
+  color: rgb(11, 65, 205);
+}

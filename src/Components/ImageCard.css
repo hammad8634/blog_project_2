@@ -1,0 +1,149 @@
+.txt-size-on-img{
+    font-size: 2.3rem !important;
+    line-height: 3rem !important;
+}
+
+.card-img{
+    max-height: 34rem;
+}
+.marg{
+    margin-top: 7rem;
+}
+.btn-clr{
+    background-color: rgb(39, 39, 231);
+    color: white;
+}
+
+@media (min-width: 992px) and (max-width: 1100px) {
+    /* CSS rules for smaller screens */
+    .marg{
+        margin-top: 5rem;
+    }
+}
+@media (min-width: 800px) and (max-width: 992px) {
+    /* CSS rules for smaller screens */
+    .marg{
+        margin-top: 4rem;
+    }
+    .txt-size-on-img{
+        font-size: 2rem !important;
+        line-height: 2.5rem !important;
+    }
+    
+}
+@media (min-width: 650px) and (max-width: 770px) {
+    /* CSS rules for smaller screens */
+    .marg{
+        margin-top: 4rem;
+    }
+    .txt-size-on-img{
+        font-size: 1.7rem !important;
+        line-height: 1.2rem !important;
+    }
+    .txt34{
+        font-size: 0.8rem;
+    }
+    .butt{
+        font-size: 0.6rem !important;
+    }
+    
+}
+@media (min-width: 500px) and (max-width: 650px) {
+    /* CSS rules for smaller screens */
+    .marg{
+        margin-top: 3.5rem;
+    }
+    .txt-size-on-img{
+        font-size: 1.6rem !important;
+        line-height: 1.1rem !important;
+    }
+    .txt34{
+        font-size: 0.8rem;
+    }
+    .butt{
+        font-size: 0.6rem !important;
+    }
+    .pad{
+        padding: 0.8rem !important;
+    }
+}
+@media (min-width: 439px) and (max-width: 500px) {
+    /* CSS rules for smaller screens */
+    .marg{
+        margin-top: 3rem;
+    }
+    .txt-size-on-img{
+        font-size: 1.4rem !important;
+        line-height: 0.9rem !important;
+    }
+    .txt34{
+        font-size: 0.7rem;
+    }
+    .butt{
+        font-size: 0.55rem !important;
+    }
+    .pad{
+        padding: 0.8rem !important;
+    }
+    
+}
+@media (min-width: 382px) and (max-width: 439px) {
+    /* CSS rules for smaller screens */
+    .marg{
+        margin-top: 2.2rem;
+    }
+    .txt-size-on-img{
+        font-size: 1.3rem !important;
+        line-height: 0.7rem !important;
+    }
+    .txt34{
+        font-size: 0.5rem;
+    }
+    .butt{
+        font-size: 0.45rem !important;
+    }
+    .pad{
+        padding: 0.7rem !important;
+    }
+    
+}
+@media (min-width: 304px) and (max-width: 382px) {
+    /* CSS rules for smaller screens */
+    .marg{
+        margin-top: 1rem;
+    }
+    .txt-size-on-img{
+        font-size: 1rem !important;
+        line-height: 0.9rem !important;
+    }
+    .txt34{
+        font-size: 0.4rem;
+    }
+    .butt{
+        font-size: 0.38rem !important;
+    }
+    .pad{
+        padding: 0.6rem !important;
+    }
+    
+}
+@media (min-width: 250px) and (max-width: 304px) {
+    /* CSS rules for smaller screens */
+    .marg{
+        margin-top: 0.5rem;
+    }
+    .txt-size-on-img{
+        font-size: 1rem !important;
+        line-height: 0.5rem !important;
+    }
+    .txt34{
+        font-size: 0.4rem;
+    }
+    .butt{
+        font-size: 0.38rem !important;
+    }
+    .pad{
+        padding: 0.6rem !important;
+    }
+    
+}

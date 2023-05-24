@@ -1,3 +1,65 @@
-.App {
-  text-align: center;
+.grad-color{
+    background: linear-gradient(to right,white , rgb(248, 227, 230));
 }
+.abd1{
+    color: red;
+    font-size: 40px;
+}
+.abd2{
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid grey;
+}
+input , button{
+    font-size: 30px;
+    border: 4px solid blue;
+}
+.back-clr{
+    background-color:#fff7f5;
+    padding: 10px;
+}
+.hovr:hover{
+    color: rgb(54, 54, 219) !important;
+    cursor: pointer;
+    opacity: 100% !important;
+}
+.hovr1:hover{
+    cursor: pointer;
+}
+.margo{
+    margin-left: 12rem;
+}
+.txt-size23{
+    font-size: 0.7rem;
+}
+.grad{
+    /* background: linear-gradient(to right, white, rgb(242, 231, 231)); */
+    background: linear-gradient(to right, white, rgb(247, 241, 241), rgb(247, 247, 253));
+}
+@media (min-width: 242px) and (max-width: 315px) {
+
+    .margo{
+        margin-left: 8rem;
+    }
+  }
+@media (min-width: 198px) and (max-width: 242px) {
+
+    .margo{
+        margin-left: 5rem;
+    }
+  }
+@media  (max-width: 198px) {
+
+    .margo{
+        margin-left: 2.5rem;
+    }
+  }
+  .grad-color{
+    background: linear-gradient(to right,white , rgb(248, 227, 230));
+}
+.container12{
+    display: flex;
+    flex-direction: column;
+   height: 100vh;
+  }
+  
+  
