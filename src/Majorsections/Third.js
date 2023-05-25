@@ -1,5 +1,6 @@
 import React from 'react'
 import Card2 from '../Components/Cards2';
+// import Card3 from '../Components/Cards3';
 
 import "./Third.css"
 export default function Third() {

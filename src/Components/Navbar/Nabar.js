@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { displayAction } from "../Store/DisplayNav";
 import "./Navbar.css";
 
 const Navbar = () => {
+  
+  const dispatch = useDispatch();
+  const showNavHandler = ()=>{
+    dispatch(displayAction.displayNav());}
+
   const [scrolled, setScrolled] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [navbarVisible, setNavbarVisible] = useState(true);
-  const [aboutRocheVisible, setAboutRocheVisible] = useState(false);
-  const [solutionsVisible, setSolutionsVisible] = useState(false);
-  const [innovationVisible, setInnovationVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,18 +47,6 @@ const Navbar = () => {
     };
   }, []);
 
-  const toggleAboutRoche = () => {
-    setAboutRocheVisible(!aboutRocheVisible);
-  };
-
-  const toggleSolutions = () => {
-    setSolutionsVisible(!solutionsVisible);
-  };
-
-  const toggleInnovation = () => {
-    setInnovationVisible(!innovationVisible);
-  };
-
   return (
     <>
       <nav
@@ -78,6 +70,7 @@ const Navbar = () => {
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={showNavHandler}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -99,7 +92,7 @@ const Navbar = () => {
                   Media
                 </a>
               </li>
-              <div className="d-flex mt-2 ms-3" style={{ height: "25px" }}>
+              <div className="d-flex mt-2 ms-3" style={{height: "25px"}}>
                 <div className="vr"></div>
               </div>
               <li className="nav-item ms-4 pt-2 hovr1">
@@ -115,26 +108,19 @@ const Navbar = () => {
             <ul className="navbar-nav ms-auto">
               <li className="nav-item dropdown">
                 <a
-                  className={`nav-link dropdown-toggle hovr3 ${
-                    aboutRocheVisible ? "active" : ""
-                  }`}
+                  className="nav-link dropdown-toggle hovr3"
                   href="/"
-                  id="aboutRocheDropdown"
+                  id="navbarDropdownMenuLink"
                   role="button"
-                  onMouseEnter={toggleAboutRoche}
-                  onMouseLeave={toggleAboutRoche}
-                  onClick={(e) => e.preventDefault()}
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
                   About Roche
                 </a>
                 <ul
-                  className={`dropdown-menu shadow border-0 overflow-auto ${
-                    aboutRocheVisible ? "show" : ""
-                  }`}
-                  aria-labelledby="aboutRocheDropdown"
+                  className="dropdown-menu shadow border-0 overflow-auto"
+                  aria-labelledby="navbarDropdownMenuLink"
                   style={{ position: "absolute", zIndex: "9999" }}
-                  onMouseEnter={toggleAboutRoche}
-                  onMouseLeave={toggleAboutRoche}
                 >
                   <li>
                     <a className="dropdown-item" href="/">
@@ -170,26 +156,19 @@ const Navbar = () => {
               </li>
               <li className="nav-item dropdown">
                 <a
-                  className={`nav-link dropdown-toggle ms-5 hovr3 ${
-                    solutionsVisible ? "active" : ""
-                  }`}
+                  className="nav-link dropdown-toggle ms-5 hovr3"
                   href="/"
-                  id="solutionsDropdown"
+                  id="navbarDropdownMenuLink"
                   role="button"
-                  onMouseEnter={toggleSolutions}
-                  onMouseLeave={toggleSolutions}
-                  onClick={(e) => e.preventDefault()}
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
                   Solutions
                 </a>
                 <ul
-                  className={`dropdown-menu shadow border-0 ${
-                    solutionsVisible ? "show" : ""
-                  }`}
-                  aria-labelledby="solutionsDropdown"
+                  className="dropdown-menu shadow border-0"
+                  aria-labelledby="navbarDropdownMenuLink"
                   style={{ position: "absolute", zIndex: "9999" }}
-                  onMouseEnter={toggleSolutions}
-                  onMouseLeave={toggleSolutions}
                 >
                   <li>
                     <a className="dropdown-item" href="/">
@@ -220,26 +199,19 @@ const Navbar = () => {
               </li>
               <li className="nav-item dropdown">
                 <a
-                  className={`nav-link dropdown-toggle ms-5 hovr3 ${
-                    innovationVisible ? "active" : ""
-                  }`}
+                  className="nav-link dropdown-toggle ms-5 hovr3"
                   href="/"
-                  id="innovationDropdown"
+                  id="navbarDropdownMenuLink"
                   role="button"
-                  onMouseEnter={toggleInnovation}
-                  onMouseLeave={toggleInnovation}
-                  onClick={(e) => e.preventDefault()}
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
                   Innovation
                 </a>
                 <ul
-                  className={`dropdown-menu shadow border-0 active ${
-                    innovationVisible ? "show" : ""
-                  }`}
-                  aria-labelledby="innovationDropdown"
+                  className="dropdown-menu shadow border-0 active"
+                  aria-labelledby="navbarDropdownMenuLink"
                   style={{ position: "absolute", zIndex: "9999" }}
-                  onMouseEnter={toggleInnovation}
-                  onMouseLeave={toggleInnovation}
                 >
                   <li>
                     <a className="dropdown-item" href="/">
@@ -268,7 +240,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <div className="d-flex mt-2 ms-5" style={{ height: "25px" }}>
+              <div className="d-flex mt-2 ms-5" style={{height: "25px"}}>
                 <div className="vr"></div>
               </div>
               <li className="nav-item ms-5">

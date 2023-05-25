@@ -12,7 +12,7 @@ const TopHeading = () => {
         </div>
       </div>
     </>
-  );  
+  );
 };
 
 export default TopHeading;

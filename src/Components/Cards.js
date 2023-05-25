@@ -4,12 +4,16 @@ import './Cards.css'; // Create a separate CSS file for styling
 const Card = ({ title, description, image }) => {
   
   return (
-    <div className="card border-0 shadow-sm rounded-0">
-    <img src={image} className="card-img-top rounded-0" alt="Card" />
-      <div className="card-body">
-     <div className="title"><h5 className="card-title">{title}</h5><div><i className="fa fa-external-link" aria-hidden="true" style={{color:"rgb(11, 65, 205)"}}></i></div></div>
-        <p className="card-text">{description}</p>
-      </div>
+    <div className="card rounded-0 border-0 ms-3 imgsize">
+   <div className='image-container'>
+                            <img src={image} className="card-img-top rounded-0 img-size img-fluid" alt="..." /> </div>
+                            <div className="card-body border-0">
+                            <div className='d-flex justify-content-between'>
+                                <div className='fs-3 mb-4 '><h5>{title}</h5></div>
+                               
+                            </div>
+                            <p className="card-text">{description}</p>
+                        </div>
     </div>
   );
 };

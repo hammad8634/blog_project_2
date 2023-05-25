@@ -10,10 +10,15 @@ import CardOverlay from "./Components/CardOverlay";
 import Cards from "./Components/Cards0";
 import Profcards from "./Components/Profcards";
 import "./App.css";
+import Snavbar from "./Components/Navbar/Snavbar";
+import { useSelector } from "react-redux";
 
 function App() {
+  const showNav = useSelector((state) => state.display.display);
   return (
     <>
+      {showNav && <Snavbar />}
+      {!showNav && ( <>
       <div className="grad-color">
         <Navbar />
         <TopHeading />
@@ -128,6 +133,7 @@ function App() {
           </div>
         </div>
       </div>
+      </> ) }
     </>
   );
 }
