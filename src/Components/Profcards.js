@@ -31,7 +31,7 @@ const Profcards = () => {
       {array1.map((item) => {
         return (
           <div
-            className="profcard-container card rounded-0 border-0 ms-3 imgsize "
+            className="profcard-container card rounded-0 border-0 ms-3 imgsize3 "
             key={item.id}
           >
             <div className="image-container">

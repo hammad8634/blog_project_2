@@ -1,20 +1,17 @@
-.img-size{
- 
+.img-size {
   border-bottom: 4px solid rgb(146, 145, 145);
 }
-.img-size:hover{
+.img-size:hover {
   transform: scale(1.1);
   border-bottom: 4px solid rgb(15, 74, 190);
-
 }
 .image-container {
-  
   position: relative;
   overflow: hidden;
 }
 
 .image-container::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -28,6 +25,7 @@
   width: 100%;
   background-color: blue; /* Adjust the desired color of the border */
 }
-.card:hover h5{ 
-  color: blue; 
+.card:hover h5 {
+  color: blue;
 }
+
