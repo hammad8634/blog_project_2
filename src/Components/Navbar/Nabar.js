@@ -4,14 +4,41 @@ import { displayAction } from "../Store/DisplayNav";
 import "./Navbar.css";
 
 const Navbar = () => {
-  
   const dispatch = useDispatch();
-  const showNavHandler = ()=>{
-    dispatch(displayAction.displayNav());}
+  const showNavHandler = () => {
+    dispatch(displayAction.displayNav());
+  };
 
   const [scrolled, setScrolled] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [navbarVisible, setNavbarVisible] = useState(true);
+  const [aboutRocheOpen, setAboutRocheOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [innovationOpen, setInnovationOpen] = useState(false);
+
+  const handleAboutRocheHover = () => {
+    setAboutRocheOpen(true);
+  };
+
+  const handleAboutRocheLeave = () => {
+    setAboutRocheOpen(false);
+  };
+
+  const handleSolutionsHover = () => {
+    setSolutionsOpen(true);
+  };
+
+  const handleSolutionsLeave = () => {
+    setSolutionsOpen(false);
+  };
+
+  const handleInnovationHover = () => {
+    setInnovationOpen(true);
+  };
+
+  const handleInnovationLeave = () => {
+    setInnovationOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,7 +119,7 @@ const Navbar = () => {
                   Media
                 </a>
               </li>
-              <div className="d-flex mt-2 ms-3" style={{height: "25px"}}>
+              <div className="d-flex mt-2 ms-3" style={{ height: "25px" }}>
                 <div className="vr"></div>
               </div>
               <li className="nav-item ms-4 pt-2 hovr1">
@@ -106,21 +133,26 @@ const Navbar = () => {
 
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-              <li className="nav-item dropdown">
+              <li
+                className="nav-item dropdown"
+                onMouseEnter={handleAboutRocheHover}
+                onMouseLeave={handleAboutRocheLeave}
+              >
                 <a
-                  className="nav-link dropdown-toggle hovr3"
+                  className="nav-link dropdown-toggle hovr3 fs-6"
                   href="/"
                   id="navbarDropdownMenuLink"
                   role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  aria-expanded={aboutRocheOpen ? "true" : "false"}
                 >
-                  About Roche
+                  <b> About Roche</b>{" "}
                 </a>
                 <ul
-                  className="dropdown-menu shadow border-0 overflow-auto"
+                  className={`dropdown-menu shadow border-0 overflow-auto ${
+                    aboutRocheOpen ? "show" : ""
+                  }`}
                   aria-labelledby="navbarDropdownMenuLink"
-                  style={{ position: "absolute", zIndex: "9999" }}
+                  // style={{ position: "absolute", zIndex: "9999" }}
                 >
                   <li>
                     <a className="dropdown-item" href="/">
@@ -154,21 +186,26 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item dropdown">
+              <li
+                className="nav-item dropdown"
+                onMouseEnter={handleSolutionsHover}
+                onMouseLeave={handleSolutionsLeave}
+              >
                 <a
                   className="nav-link dropdown-toggle ms-5 hovr3"
                   href="/"
-                  id="navbarDropdownMenuLink"
+                  id="navbarDropdownMenuLink2"
                   role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  aria-expanded={solutionsOpen ? "true" : "false"}
                 >
-                  Solutions
+                  <b>Solutions</b>
                 </a>
                 <ul
-                  className="dropdown-menu shadow border-0"
+                  className={`dropdown-menu shadow border-0 ${
+                    solutionsOpen ? "show" : ""
+                  }`}
                   aria-labelledby="navbarDropdownMenuLink"
-                  style={{ position: "absolute", zIndex: "9999" }}
+                  // style={{ position: "absolute", zIndex: "9999" }}
                 >
                   <li>
                     <a className="dropdown-item" href="/">
@@ -197,21 +234,26 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item dropdown">
+              <li
+                className="nav-item dropdown"
+                onMouseEnter={handleInnovationHover}
+                onMouseLeave={handleInnovationLeave}
+              >
                 <a
                   className="nav-link dropdown-toggle ms-5 hovr3"
                   href="/"
-                  id="navbarDropdownMenuLink"
+                  id="navbarDropdownMenuLink3"
                   role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  aria-expanded={innovationOpen ? "true" : "false"}
                 >
-                  Innovation
+                  <b>Innovation</b>
                 </a>
                 <ul
-                  className="dropdown-menu shadow border-0 active"
+                  className={`dropdown-menu shadow border-0 active ${
+                    innovationOpen ? "show" : ""
+                  }`}
                   aria-labelledby="navbarDropdownMenuLink"
-                  style={{ position: "absolute", zIndex: "9999" }}
+                  // style={{ position: "absolute", zIndex: "9999" }}
                 >
                   <li>
                     <a className="dropdown-item" href="/">
@@ -240,7 +282,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <div className="d-flex mt-2 ms-5" style={{height: "25px"}}>
+              <div className="d-flex mt-2 ms-5" style={{ height: "25px" }}>
                 <div className="vr"></div>
               </div>
               <li className="nav-item ms-5">
