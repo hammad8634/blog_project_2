@@ -74,5 +74,5 @@ button {
 
 .contactline-div:hover hr,
 .locationline-div:hover hr {
-    border-color: blue !important;
+  border-color: blue !important;
 }

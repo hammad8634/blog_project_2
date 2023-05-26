@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { displayAction } from "../Store/DisplayNav";
+
 const Snavbar = () => {
   const dispatch = useDispatch();
   const showNavHandler = () => {

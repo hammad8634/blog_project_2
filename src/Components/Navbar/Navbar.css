@@ -1,35 +1,33 @@
-.navbar-logo{
-    width: 5rem;
-    height: 5rem;
+.navbar-logo {
+  width: 5rem;
+  height: 5rem;
 }
-.hovr1:hover{
-    cursor: pointer;
-    border-bottom: 2px solid blue;
+.hovr1:hover {
+  cursor: pointer;
+  border-bottom: 2px solid blue;
 }
-.hovr2:hover{
-    border-bottom: 2px solid blue;
+.hovr2:hover {
+  border-bottom: 2px solid blue;
 }
-.hovr3:hover{
-    border-bottom: 4px solid blue;
-    border-radius: 10%;
+.hovr3:hover {
+  border-bottom: 4px solid blue;
+  border-radius: 10%;
 }
-.hovr6:hover{
-    padding-right: 0 !important;
+.hovr6:hover {
+  padding-right: 0 !important;
 }
 .navbar {
-    transition: all 0.3s ease;
-  }
+  transition: all 0.3s ease;
   
+}
+
 .navbar.scrolled {
-    border-bottom: 1px solid #3c3939;
-    background: white !important;
-  }
-  /* Navbar.css */
+  border-bottom: 1px solid #3c3939;
+  background: white !important;
+}
+/* Navbar.css */
 .hidden {
-    transform: translateY(-100%);
-    visibility: hidden;
-    transition: transform 0.3s ease, visibility 0.3s ease;
-  }
-  
-  
-  
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition: transform 0.3s ease, visibility 0.3s ease;
+}
