@@ -1,9 +1,25 @@
 .txt1-size{
     font-size: 4rem !important;
+    opacity: 0;
+    position: relative;
+    animation: fade-in 0.5s ease-in-out forwards;
 }
 @media  (max-width: 400px) {
 
   .txt1-size{
     font-size: 2rem !important;
+    opacity: 0;
+    position: relative;
+    animation: fade-in 0.5s ease-in-out forwards;
 }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    top: 30px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
