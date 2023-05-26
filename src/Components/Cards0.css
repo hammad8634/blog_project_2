@@ -1,19 +1,76 @@
 .card3 {
-    position: relative;
-    width: 22.5rem; 
-    overflow: hidden;
-  }
-  
-  .card3 img {
-    width: 100%;
-    height: 17rem;
-    transition: opacity 0.5s;
-  }
-  
-  .card3:hover img {
+  position: relative;
+  width: 25rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card3 img {
+  width: 100%;
+  height: 19rem;
+  transition: opacity 0.5s;
+}
+
+.card3:hover img {
+  opacity: 0;
+}
+
+.hovered .card-body {
+  display: none;
+}
+
+.hover-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  pointer-events: none;
+}
+
+.hover-title {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: slideFromBottom 0.8s forwards;
+}
+
+.hover-text {
+  white-space: normal;
+  opacity: 0;
+  animation: slideFromBottom 1.5s forwards;
+}
+
+.card-date {
+  position: absolute;
+  left: 10px;
+  color: #000;
+  margin-top: 5px;
+  padding-left: 6px;
+}
+
+.brdr {
+  border-bottom: 4px solid #ecd8d3 !important;
+}
+
+.hover-date {
+  position: absolute;
+  font-weight: bold;
+  font-size: 18px;
+  opacity: 0;
+  animation: slideFromBottom 2s forwards;
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(100%);
     opacity: 0;
   }
-  
-.brdr{
-  border-bottom: 4px solid #ecd8d3 !important;
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
