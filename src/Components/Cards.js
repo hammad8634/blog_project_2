@@ -9,12 +9,12 @@ const Card = ({ title, description, image }) => {
           src={image}
           className="card-img-top rounded-0 img-size img-fluid"
           alt="..."
-        />{" "}
+        />
       </div>
       <div className="card-body border-0">
         <div className="d-flex justify-content-between">
           <div className="fs-3 mb-4 ">
-            <h5>{title}</h5>
+            <h5 ><a className="card-title" href="#">{title}</a></h5>
           </div>
         </div>
         <p className="card-text">{description}</p>

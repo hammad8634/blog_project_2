@@ -15,7 +15,7 @@ button {
   border: 4px solid blue;
 }
 .back-clr {
-  background-color: #fff7f5;
+  background-color: #f6fff5;
   padding: 10px;
 }
 .hovr:hover {
@@ -57,8 +57,11 @@ button {
   }
 }
 .grad-color {
-  background: linear-gradient(to right, white, rgb(248, 227, 230));
+  background: linear-gradient(to bottom, white,#fac9b5);
 }
+
+
+
 .container12 {
   display: flex;
   flex-direction: column;

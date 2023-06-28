@@ -1,10 +1,12 @@
 .img-size {
   border-bottom: 4px solid rgb(146, 145, 145);
 }
+
 .img-size:hover {
   transform: scale(1.1);
   border-bottom: 4px solid rgb(15, 74, 190);
 }
+
 .image-container {
   position: relative;
   overflow: hidden;
@@ -16,16 +18,29 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 4px; /* Adjust the desired height of the border */
+  height: 4px; 
   background-color: gray;
   transition: width 0.5s, background-color 1.5s;
 }
 
 .image-container:hover::after {
   width: 100%;
-  background-color: blue; /* Adjust the desired color of the border */
+  background-color: blue; 
 }
-.card:hover h5 {
+
+.card-body h5 {
+  color: black;
+}
+
+.card-body:hover h5 {
   color: blue;
 }
 
+.card a,
+.card a:hover {
+  text-decoration: none;
+}
+
+.card p {
+  text-decoration: none;
+}

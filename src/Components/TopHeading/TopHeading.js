@@ -35,7 +35,7 @@ const TopHeading = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-6 bordr mt-5">
-            <div className="fs-1">
+            <div className="fs-1 top_heading">
               We're revolutionising <br /> personalised healthcare
             </div>
             <div className="mt-3 lead">
@@ -47,9 +47,9 @@ const TopHeading = () => {
 
             <div className="container">
               <div className="row">
-                <div className="col-12 col-sm-6 mx-auto">
-                  <div className="my-5 text-center">
-                    <a type="button" href="/" className="button p-3">
+                <div className="col-12 col-sm-6 top_h1">
+                  <div className="my-5 ">
+                    <a type="button" href="/" className="button p-3 text-center">
                       More about personalised healtcare
                     </a>
                   </div>
@@ -70,9 +70,9 @@ const TopHeading = () => {
             </div>
             <div className="container">
               <div className="row">
-                <div className="col-12 col-sm-6 mx-auto">
-                  <div className="my-5 text-center">
-                    <a type="button" href="/" className="button p-3">
+                <div className="col-12 col-sm-6  top_h1">
+                  <div className="my-5 ">
+                    <a type="button" href="/" className="button p-3 text-center">
                       More about sustainable
                     </a>
                   </div>
