@@ -1,23 +1,79 @@
 .txt-size-on-img {
-  font-size: 2.3rem !important;
+  font-size: 2.5rem !important;
   line-height: 3rem !important;
+  transform: scaleY(1.1);
+
 }
 
 .card-img {
-  max-height: 34rem;
+  max-height: 30rem;
+  object-fit: cover;
+
 }
 .marg {
-  margin-top: 7rem;
+  margin-top: 4rem;
 }
 .btn-clr {
   background-color: rgb(39, 39, 231);
   color: white;
 }
 
+.butt {
+  font-size: 1.2rem !important;
+  background-color: #0B41CD !important ;
+}
+.butt:hover{
+  background-color: #062470 !important;
+}
+
+.description {
+  font-size: 21px;
+  margin-top: 25px;
+  transform: scaleY(1.1);
+}
+
+
+
+@media (max-width: 992px) {
+  .card-img {
+    max-height: unset;
+    height: 120vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
+  .txt-size-on-img {
+    font-size: 2rem !important;
+    line-height: 2.5rem !important;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .txt34 {
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  .butt {
+    font-size: 1rem !important;
+  }
+  .look-beyond-text{
+    margin: 0px 0px 0px 10px;
+  }
+}
+
+
 @media (min-width: 992px) and (max-width: 1100px) {
   /* CSS rules for smaller screens */
   .marg {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 }
 @media (min-width: 800px) and (max-width: 992px) {
@@ -84,14 +140,13 @@
     padding: 0.8rem !important;
   }
 }
-@media (min-width: 382px) and (max-width: 439px) {
-  /* CSS rules for smaller screens */
+/* @media (min-width: 382px) and (max-width: 439px) {
   .marg {
     margin-top: 2.2rem;
   }
   .txt-size-on-img {
     font-size: 1.3rem !important;
-    line-height: 0.7rem !important;
+    line-height: 1.8rem !important;
   }
   .txt34 {
     font-size: 0.5rem;
@@ -102,7 +157,7 @@
   .pad {
     padding: 0.7rem !important;
   }
-}
+} */
 @media (min-width: 304px) and (max-width: 382px) {
   /* CSS rules for smaller screens */
   .marg {

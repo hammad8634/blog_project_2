@@ -1,3 +1,4 @@
+  
 .grad-color {
   background: linear-gradient(to right, white, rgb(248, 227, 230));
 }
@@ -15,7 +16,7 @@ button {
   border: 4px solid blue;
 }
 .back-clr {
-  background-color: #f6fff5;
+  background-color: #fff7f5;
   padding: 10px;
 }
 .hovr:hover {
@@ -26,19 +27,24 @@ button {
 .hovr1:hover {
   cursor: pointer;
 }
+.social-icon-container {
+  padding-right: 70px;
+}
+
 .margo {
   margin-left: 12rem;
 }
 .txt-size23 {
-  font-size: 0.7rem;
+  /* font-size: 0.8rem; */
+  text-align: left;
 }
 .grad {
   /* background: linear-gradient(to right, white, rgb(242, 231, 231)); */
   background: linear-gradient(
-    to right,
-    white,
+    to bottom right,
+    rgb(252, 252, 252),
     rgb(247, 241, 241),
-    rgb(247, 247, 253)
+    rgb(204, 204, 228)
   );
 }
 @media (min-width: 242px) and (max-width: 315px) {
@@ -59,8 +65,6 @@ button {
 .grad-color {
   background: linear-gradient(to bottom, white,#fac9b5);
 }
-
-
 
 .container12 {
   display: flex;

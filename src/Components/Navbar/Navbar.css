@@ -21,6 +21,15 @@
   
 }
 
+.navbar {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hide {
+  transform: translateY(-100%);
+}
+
+
 .navbar.scrolled {
   border-bottom: 1px solid #3c3939;
   background: white !important;

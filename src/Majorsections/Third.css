@@ -1,3 +1,47 @@
-.container3{
-    margin-top: 75px;
-}
+/* Third.css */
+
+.container3 {
+    padding: 10px;
+  }
+  
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .img-rectangle {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card2 {
+    border-radius: 0;
+  }
+  
+  .button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 16px 24px;
+  }
+  
+  @media (min-width: 576px) {
+    .container4 {
+      display: flex;
+      align-items: center;
+    }
+  
+    .card-body2 {
+      /* padding-left: 30px; */
+      padding-right: 30px;
+    }
+    .button {
+        display: block;
+        width:30%;
+        text-align: center;
+      }
+  }
+  

@@ -36,9 +36,12 @@
   color: blue;
 }
 
-.card a,
-.card a:hover {
+.card a{
   text-decoration: none;
+}
+
+.card a:hover {
+  color: rgb(16, 16, 221);
 }
 
 .card p {

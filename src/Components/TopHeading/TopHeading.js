@@ -25,8 +25,8 @@ const TopHeading = () => {
         <video
           // ref={videoRef}
           className="size vid shadow"
-          // onMouseEnter={playVideo}
-          // onMouseLeave={pauseVideo}
+        // onMouseEnter={playVideo}
+        // onMouseLeave={pauseVideo}
         >
           <source src="./images/video.mp4" type="video/mp4" />
         </video>
@@ -47,9 +47,9 @@ const TopHeading = () => {
 
             <div className="container">
               <div className="row">
-                <div className="col-12 col-sm-6 top_h1">
+                <div className="col-12 col-sm-8 top_h1">
                   <div className="my-5 ">
-                    <a type="button" href="/" className="button p-3 text-center">
+                    <a type="button" href="/" className="button1 p-3 text-center">
                       More about personalised healtcare
                     </a>
                   </div>
@@ -72,7 +72,7 @@ const TopHeading = () => {
               <div className="row">
                 <div className="col-12 col-sm-6  top_h1">
                   <div className="my-5 ">
-                    <a type="button" href="/" className="button p-3 text-center">
+                    <a type="button" href="/" className="button1 p-3 text-center">
                       More about sustainable
                     </a>
                   </div>

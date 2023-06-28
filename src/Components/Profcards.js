@@ -3,6 +3,9 @@ import "./Profcards.css";
 import i1Image from "./images/i1.jpg";
 import i2Image from "./images/i2.jpg";
 import i3Image from "./images/i3.jpg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 
 const Profcards = () => {
   const array1 = [
@@ -41,14 +44,14 @@ const Profcards = () => {
                 alt="..."
               />
             </div>
-            <div className="card-body border-0">
+            <div className="border-0">
               <div className="d-flex justify-content-between">
-                <div className="fs-3 mb-4 profcard-title">{item.title}</div>
+                <div className="fs-3 mb-4 profcard-title mt-2 fw-semibold">{item.title}</div>
                 <div>
-                  <i className="fa-solid fa-arrow-right text-primary"></i>
+                <FontAwesomeIcon icon={faArrowRight} className="text-primary mt-4 fa-2x" />
                 </div>
               </div>
-              <p className="card-text profcard-container ">{item.para}</p>
+              <p className="card-text profcard-container mb-3">{item.para}</p>
             </div>
           </div>
         );

@@ -3,36 +3,30 @@ import './CardOverlay.css';
 import ImgCard from './ImgCard';
 
 const CardOverlay = () => {
-  const words = ['Science', 'Society', 'Partnership', 'Culture'];
+  const words = ['Science', 'Partnership', 'Culture', 'Patients', 'Society'];
+  const colors = ['#a1695d', '#a8776c', 'purple', 'blue', '#0B41CD']; 
+
   const [currentWord, setCurrentWord] = useState(0);
+  const [currentColor, setCurrentColor] = useState('#EDC6BE');
 
   useEffect(() => {
     const interval = setInterval(() => {
-  const words = ['Science', 'Society', 'Partnership', 'Culture'];
- 
-  
       setCurrentWord((prevWord) => (prevWord + 1) % words.length);
-      setCurrentColor(getRandomColor());
+      setCurrentColor(colors[currentWord]);
     }, 1000);
-   
+
     return () => clearInterval(interval);
-  }, []);
-  const [currentColor, setCurrentColor] = useState('#000');
-  const getRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;  };
+  }, [currentWord]);
   return (
     <>
-      <div className='txt1-size '>
-        Discover great stories about
-        <br />
-        <span className=""style={{ color: currentColor }}>{words[currentWord]}</span>
+      <div className='mt-1'>
+        <div className='txt1-size'>
+          Discover great stories about
+          <br />
+          <span className="changing-words" style={{ color: currentColor }}>{words[currentWord]}</span>
+        </div>
+        <ImgCard></ImgCard>
       </div>
-      <ImgCard></ImgCard>
     </>
   )
 }

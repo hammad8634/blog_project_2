@@ -49,9 +49,8 @@ function Cards() {
 
           return (
             <div
-              className={`card card3 rounded-0 mt-3 shadow border-0 ${
-                hovered ? "hovered" : ""
-              }`}
+              className={`card card3 rounded-0 mt-3 shadow border-0 ${hovered ? "hovered" : ""
+                }`}
               key={item.id}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}

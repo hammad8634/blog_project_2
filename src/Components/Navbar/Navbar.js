@@ -4,6 +4,34 @@ import { displayAction } from "../Store/DisplayNav";
 import "./Navbar.css";
 
 const Navbar = () => {
+
+
+  const [show, setShow] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        setShow(true);
+      } else { // if scroll up show the navbar
+        setShow(false);
+      }
+
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
   const dispatch = useDispatch();
   const showNavHandler = () => {
     dispatch(displayAction.displayNav());
@@ -77,9 +105,8 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`navbar navbar-expand-lg navbar-light bg-transparent pt-4 navbar sticky-top ${
-          scrolled ? "scrolled" : ""
-        } ${navbarVisible ? "" : "hidden"}`}
+        className={`active ${show && 'hidden'} navbar navbar-expand-lg navbar-light bg-transparent pt-4 navbar sticky-top ${scrolled ? "scrolled" : ""
+          } `}
       >
         <div className="container">
           <a className="navbar-brand" href="/">
@@ -148,11 +175,10 @@ const Navbar = () => {
                   <b> About Roche</b>{" "}
                 </a>
                 <ul
-                  className={`dropdown-menu shadow border-0 overflow-auto ${
-                    aboutRocheOpen ? "show" : ""
-                  }`}
+                  className={`dropdown-menu shadow border-0 overflow-auto ${aboutRocheOpen ? "show" : ""
+                    }`}
                   aria-labelledby="navbarDropdownMenuLink"
-                  // style={{ position: "absolute", zIndex: "9999" }}
+                // style={{ position: "absolute", zIndex: "9999" }}
                 >
                   <li>
                     <a className="dropdown-item" href="/">
@@ -201,11 +227,10 @@ const Navbar = () => {
                   <b>Solutions</b>
                 </a>
                 <ul
-                  className={`dropdown-menu shadow border-0 ${
-                    solutionsOpen ? "show" : ""
-                  }`}
+                  className={`dropdown-menu shadow border-0 ${solutionsOpen ? "show" : ""
+                    }`}
                   aria-labelledby="navbarDropdownMenuLink"
-                  // style={{ position: "absolute", zIndex: "9999" }}
+                // style={{ position: "absolute", zIndex: "9999" }}
                 >
                   <li>
                     <a className="dropdown-item" href="/">
@@ -249,11 +274,10 @@ const Navbar = () => {
                   <b>Innovation</b>
                 </a>
                 <ul
-                  className={`dropdown-menu shadow border-0 active ${
-                    innovationOpen ? "show" : ""
-                  }`}
+                  className={`dropdown-menu shadow border-0 active ${innovationOpen ? "show" : ""
+                    }`}
                   aria-labelledby="navbarDropdownMenuLink"
-                  // style={{ position: "absolute", zIndex: "9999" }}
+                // style={{ position: "absolute", zIndex: "9999" }}
                 >
                   <li>
                     <a className="dropdown-item" href="/">

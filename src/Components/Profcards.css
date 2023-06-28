@@ -1,6 +1,6 @@
 .img-size {
   height: 15rem;
-  width: 25rem;
+  width: 22rem;
   border-bottom: 4px solid rgb(146, 145, 145);
 }
 .img-size:hover {
@@ -20,7 +20,7 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 4px; /* Adjust the desired height of the border */
+  height: 4px;
   background-color: gray;
   transition: width 0.5s, background-color 1.5s;
 }
@@ -31,16 +31,16 @@
 
 .image-container:hover::after {
   width: 100%;
-  background-color: blue;
+  background-color: #0B41CD;
 }
 
 .imgsize3 {
-  width: 25rem;
+  width: 26rem;
 }
 .profcard-container:hover {
   cursor: pointer;
 }
 
 .profcard-container:hover .profcard-title {
-  color: blue;
+  color:#0B41CD;
 }

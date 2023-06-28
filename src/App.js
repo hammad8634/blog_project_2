@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import "./App.css";
 import CardOverlay from "./Components/CardOverlay";
 import Cards from "./Components/Cards0";
-import Navbar from "./Components/Navbar/Nabar";
+import Navbar from "./Components/Navbar/Navbar";
 import Snavbar from "./Components/Navbar/Snavbar";
 import Profcards from "./Components/Profcards";
 import TopHeading from "./Components/TopHeading/TopHeading";
@@ -18,8 +18,8 @@ function App() {
       {showNav && <Snavbar />}
       {!showNav && (
         <>
+          <Navbar />
           <div className="grad-color">
-            <Navbar />
             <TopHeading />
           </div>
           <div className="container">
@@ -27,7 +27,9 @@ function App() {
             <Second></Second>
             <Third></Third>
           </div>
-          <div className="back-clr container-fluid">
+          {/* <Navbar /> */}
+
+          <div className="back-clr container-fluid mt-5">
             <div className="container">
               <CardOverlay></CardOverlay>
               <Cards></Cards>
@@ -50,7 +52,7 @@ function App() {
               <div className="hovr1">
                 <div className="my-5 contactline-div">
                   <div className="d-flex justify-content-sm-between hovr">
-                    <div className="fs-6">Contact</div>
+                    <div className="fs-4">Contact</div>
                     <div className="d-flex align-items-center ms-lg-5  margo">
                       <i className="fa-solid fa-greater-than"></i>
                     </div>
@@ -59,7 +61,7 @@ function App() {
                 </div>
                 <div className="my-5 locationline-div">
                   <div className="d-flex justify-content-sm-between hovr">
-                    <div className="fs-6">Locations</div>
+                    <div className="fs-4">Locations</div>
                     <div className="d-flex align-items-center margo">
                       <i className="fa-solid fa-greater-than"></i>
                     </div>
@@ -68,12 +70,12 @@ function App() {
                 </div>
               </div>
               <div className="d-flex flex-column my-3">
-                <small className="opacity-50 mb-3">Helpful links</small>
-                <div className="mb-3 hovr">Covid-19</div>
-                <div className="mb-3 hovr">Pharma solutions</div>
-                <div className="mb-3 hovr">Roche Careers</div>
-                <div className="mb-3 hovr">Media Library</div>
-                <div className="mb-3 hovr">Annual report 2022</div>
+                <small className="opacity-50 mb-3 fs-5">Helpful links</small>
+                <div className="mb-3 hovr fs-4">Covid-19</div>
+                <div className="mb-3 hovr fs-4">Pharma solutions</div>
+                <div className="mb-3 hovr fs-4">Roche Careers</div>
+                <div className="mb-3 hovr fs-4">Media Library</div>
+                <div className="mb-3 hovr fs-4">Annual report 2022</div>
               </div>
               <div className="d-flex flex-column my-3">
                 <div className="opacity-50 hovr1">Share price</div>
@@ -94,22 +96,35 @@ function App() {
               <hr className="border border-dark border-1 opacity-25 hovr" />
             </div>
             <div className="container ">
-              <div className="container mt-5 pb-5 row text-center">
+              <div className="container mt-5 pb-5 row text-left">
                 <div className="d-flex flex-column flex-wrap col-md-4 col-12">
                   <div>
-                    <i className="fa-brands fa-linkedin opacity-75  hovr"></i>
-                    <i className="fa-brands fa-facebook-f mt-3 mt-sm-0 ms-3 opacity-75 hovr"></i>
-                    <i className="fa-brands fa-twitter ms-3 mt-3 mt-sm-0 opacity-75 hovr"></i>
-                    <i className="fa-brands fa-square-instagram ms-3 mt-3 mt-sm-0 opacity-75 hovr"></i>
-                    <i className="fa-brands fa-youtube ms-3 opacity-75 mt-3 mt-sm-0 hovr"></i>
+                    <div className="d-flex justify-content-between">
+                      <div className="social-icon-container">
+                        <i className="fa-brands fa-linkedin opacity-75 hovr"></i>
+                      </div>
+                      <div className="social-icon-container">
+                        <i className="fa-brands fa-facebook-f opacity-75 hovr"></i>
+                      </div>
+                      <div className="social-icon-container">
+                        <i className="fa-brands fa-twitter opacity-75 hovr"></i>
+                      </div>
+                      <div className="social-icon-container">
+                        <i className="fa-brands fa-square-instagram opacity-75 hovr"></i>
+                      </div>
+                      <div className="social-icon-container">
+                        <i className="fa-brands fa-youtube opacity-75 hovr"></i>
+                      </div>
+                    </div>
                   </div>
+
                   <small className="opacity-75 mt-5">
                     © 2023 F. Hoffmann-La Roche Ltd 5/22/2023
                   </small>
                 </div>
                 <div className="d-flex flex-column  col-md-8 col-12">
-                  <div className="container d-flex mt-3 mt-sm-0 justify-content-center">
-                    <small className="opacity-50 hovr mt-3 mt-sm-0">
+                  <div className="container d-flex mt-3 mt-sm-0 text-left fs-4">
+                    <small className="opacity-50 hovr mt-3 mt-sm-0 ">
                       Privacy policy
                     </small>
                     <small className="opacity-50 ms-4 hovr mt-3 mt-sm-0">
@@ -119,7 +134,7 @@ function App() {
                       Cookies
                     </small>
                   </div>
-                  <small className="opacity-100 mt-5 txt-size23 fw-semibold">
+                  <small className="opacity-100 mt-5 fs-6 txt-size23 fw-semibold ">
                     This website contains information on products which is
                     targeted to a wide range of audiences and could contain
                     product details or information otherwise not accessible or

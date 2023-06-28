@@ -1,9 +1,9 @@
 import React from "react";
-import "./Cards.css"; // Create a separate CSS file for styling
+import "./Cards.css";
 
 const Card = ({ title, description, image }) => {
   return (
-    <div className="card rounded-0 border-0 ms-3 imgsize">
+    <div className="card rounded-0 border-0 ms-2 imgsize">
       <div className="image-container">
         <img
           src={image}
@@ -11,7 +11,7 @@ const Card = ({ title, description, image }) => {
           alt="..."
         />
       </div>
-      <div className="card-body border-0">
+      <div className="mt-3 border-0">
         <div className="d-flex justify-content-between">
           <div className="fs-3 mb-4 ">
             <h5 ><a className="card-title" href="#">{title}</a></h5>
