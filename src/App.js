@@ -100,9 +100,9 @@ function App() {
                 <div className="d-flex flex-column flex-wrap col-md-4 col-12">
                   <div>
                     <div className="d-flex justify-content-between">
-                      <div className="social-icon-container">
+                      {/* <div className="social-icon-container">
                         <i className="fa-brands fa-linkedin opacity-75 hovr"></i>
-                      </div>
+                      </div> */}
                       <div className="social-icon-container">
                         <i className="fa-brands fa-facebook-f opacity-75 hovr"></i>
                       </div>
