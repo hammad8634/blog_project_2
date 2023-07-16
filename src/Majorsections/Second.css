@@ -1,11 +1,48 @@
 .container2{
     background-color:rgb(245, 245, 242);
     padding: 2.5rem;
-    margin-top:75px ;
+    margin-top: 20px;
+    padding-bottom: 5rem;
 }
 .icon{
     font-size: 1.5rem;
 }
 .data{
-    font-size: 1rem;
+    font-size: 1.1rem;
+    transform: scaleY(1.12);
+}
+
+.oppacity-data {
+    opacity: 0.8;
+
+}
+
+.custom-link {
+    text-decoration: none; 
+    padding-bottom: 1px; 
+    border-bottom: 2px solid #0B41CD; 
+    color: #0B41CD;
+    display: inline-block; 
+    font-weight: 400;
+    font-size: 18px;
+
+    transform: scaleY(1.2);
+
+  }
+
+  .text-privacy {
+    /* line-height: 1; */
+
+  }
+
+  @media (max-width: 426px){
+  .data {
+    padding-top: 30px;
+  }
+}
+
+  @media (min-width: 769px) {
+    .container2{
+        margin-top: 140px ;
+    }
 }

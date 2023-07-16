@@ -30,11 +30,11 @@ const Profcards = () => {
   ];
 
   return (
-    <div className="d-flex flex-wrap justify-content-lg-between justify-content-center container my-5">
+    <div className="d-flex flex-wrap my-5">
       {array1.map((item) => {
         return (
           <div
-            className="profcard-container card rounded-0 border-0 ms-3 imgsize3 "
+            className="profcard-container card rounded-0 border-0 ms-4 imgsize3 "
             key={item.id}
           >
             <div className="image-container">
@@ -46,9 +46,9 @@ const Profcards = () => {
             </div>
             <div className="border-0">
               <div className="d-flex justify-content-between">
-                <div className="fs-3 mb-4 profcard-title mt-2 fw-semibold">{item.title}</div>
+                <div className="fs-2 mb-4 profcard-title mt-2 fw-semibold">{item.title}</div>
                 <div>
-                <FontAwesomeIcon icon={faArrowRight} className="text-primary mt-4 fa-2x" />
+                  <FontAwesomeIcon icon={faArrowRight} className="text-primary mt-4 professional-arrow-icon" />
                 </div>
               </div>
               <p className="card-text profcard-container mb-3">{item.para}</p>

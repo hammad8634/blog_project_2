@@ -38,7 +38,7 @@ const TopHeading = () => {
             <div className="fs-1 top_heading">
               We're revolutionising <br /> personalised healthcare
             </div>
-            <div className="mt-3 lead">
+            <div className="mt-3 sustain-para">
               We bring the right treatments to the right patients at the right
               time. With our combined strengths in pharmaceuticals and
               diagnostics, we are better equipped to drive personalised
@@ -62,7 +62,7 @@ const TopHeading = () => {
             <div className="fs-1">
               We’re delivering sustainable <br /> value
             </div>
-            <div className="mt-3 lead">
+            <div className="mt-3 sustain-para">
               Our ambition lies not only in transforming healthcare through
               innovative solutions, but also in our contributions to
               environmental protection, supply chain sustainability and social

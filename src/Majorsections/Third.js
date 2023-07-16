@@ -12,11 +12,11 @@ export default function Third() {
         description2="We focus on finding new medicines and diagnostics and utilising data-based insights to evolve the practice of medicine and help patients live longer, better lives."
         image2="https://assets.cwp.roche.com/f/126832/1920x1080/191b85adf7/about-roche-qualitytest.png/m/768x0/filters:format(webp):quality(90)/"
       />
-      <div className="pt-5 pb-5">
-        <div className="container4 mt-4">
+      {/* <div className="pt-5 pb-5"> */}
+        <div className="container4 ">
           <div className="card2 mb-3">
             <div className="row g-0">
-              <div className="col-lg-6 col-md-12 col-sm-6 order-sm-2">
+              <div className="col-lg-6 col-md-12 col-sm-10 order-sm-2 ">
                 <div className="img-container">
                   <img
                     className="img-fluid img-rectangle"
@@ -25,8 +25,8 @@ export default function Third() {
                   />
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-6 order-sm-1">
-                <div className="card-body2">
+              <div className="col-lg-6 col-md-12 col-sm-10 order-sm-1">
+                <div className="card-body2b">
                   <p className="card2-title mt-3">Solutions</p>
                   <p className="card2-text lead">
                     Since the founding of our company, we have been developing
@@ -40,7 +40,7 @@ export default function Third() {
                   </div>
                 </div>
               </div>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>

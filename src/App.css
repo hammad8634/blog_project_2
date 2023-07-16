@@ -2,6 +2,25 @@
 .grad-color {
   background: linear-gradient(to right, white, rgb(248, 227, 230));
 }
+
+.container_e {
+  padding: 80px;
+}
+
+.container_p {
+  padding: 0px 80px;
+}
+
+
+
+.explore-btn{
+  background-color: #0B41CD !important;
+  padding: 14px 24px;
+}
+.explore-btn:hover{
+  background-color: #052066 !important;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
 .abd1 {
   color: red;
   font-size: 40px;
@@ -19,6 +38,15 @@ button {
   background-color: #fff7f5;
   padding: 10px;
 }
+.hovr{
+  font-weight:400
+
+}
+
+.share-value{
+  font-weight: 400;
+}
+
 .hovr:hover {
   color: rgb(54, 54, 219) !important;
   cursor: pointer;
@@ -35,9 +63,18 @@ button {
   margin-left: 12rem;
 }
 .txt-size23 {
-  /* font-size: 0.8rem; */
   text-align: left;
+  font-weight: 500;
+  font-size: 13px;
+  opacity: 0.8;
 }
+
+.arrow-footer{
+  font-size: 9px !important;
+  transform: scaleY(2);
+  
+}
+
 .grad {
   /* background: linear-gradient(to right, white, rgb(242, 231, 231)); */
   background: linear-gradient(
@@ -52,6 +89,8 @@ button {
     margin-left: 8rem;
   }
 }
+
+
 @media (min-width: 198px) and (max-width: 242px) {
   .margo {
     margin-left: 5rem;
@@ -62,6 +101,22 @@ button {
     margin-left: 2.5rem;
   }
 }
+
+@media (min-width: 768px) {
+  .container_c {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  
+}
+
+@media screen and (max-width: 1024px) {
+  .container_p {
+    padding: 0px 20px;
+  }
+  
+}
+
 .grad-color {
   background: linear-gradient(to bottom, white,#fac9b5);
 }
@@ -70,6 +125,13 @@ button {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+
+@media screen and (max-width: 786px) {
+  .container_e {
+    padding: 0px 15px;
+  }
 }
 
 .contactline-div:hover,

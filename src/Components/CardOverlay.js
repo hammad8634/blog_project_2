@@ -4,7 +4,7 @@ import ImgCard from './ImgCard';
 
 const CardOverlay = () => {
   const words = ['Science', 'Partnership', 'Culture', 'Patients', 'Society'];
-  const colors = ['#a1695d', '#a8776c', 'purple', 'blue', '#0B41CD']; 
+  const colors = ['#a1695d', '#a8776c', 'purple', 'blue', '#0B41CD'];
 
   const [currentWord, setCurrentWord] = useState(0);
   const [currentColor, setCurrentColor] = useState('#EDC6BE');
@@ -19,11 +19,12 @@ const CardOverlay = () => {
   }, [currentWord]);
   return (
     <>
-      <div className='mt-1'>
-        <div className='txt1-size'>
-          Discover great stories about
+      <div className='mt-5'>
+        <div className='txt1-size mb-5'>
+          <text className='discover-text'>          Discover great stories about
+          </text>
           <br />
-          <span className="changing-words" style={{ color: currentColor }}>{words[currentWord]}</span>
+          <span className="changing-words " style={{ color: currentColor }}>{words[currentWord]}</span>
         </div>
         <ImgCard></ImgCard>
       </div>

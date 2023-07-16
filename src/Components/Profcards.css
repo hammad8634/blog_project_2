@@ -1,7 +1,9 @@
 .img-size {
   height: 15rem;
-  width: 22rem;
+  width: 24rem;
   border-bottom: 4px solid rgb(146, 145, 145);
+  object-fit: cover;
+
 }
 .img-size:hover {
   transform: scale(1.1);
@@ -43,4 +45,13 @@
 
 .profcard-container:hover .profcard-title {
   color:#0B41CD;
+}
+
+.professional-arrow-icon {
+  font-size: 20px;
+}
+.card-text {
+  font-size: 18px;
+  transform: scaleY(1.15);
+  opacity: 0.8;
 }
