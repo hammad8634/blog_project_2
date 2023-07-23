@@ -52,6 +52,6 @@
 }
 .card-text {
   font-size: 18px;
-  transform: scaleY(1.15);
-  opacity: 0.8;
+  /* transform: scaleY(1.15); */
+  opacity: 0.9;
 }

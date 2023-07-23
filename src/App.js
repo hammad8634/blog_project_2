@@ -35,8 +35,7 @@ function App() {
               <Cards></Cards>
               <div className="text-center">
                 <div className="btn btn-primary explore-btn rounded-0 my-5 ">
-                  <text className="fs-5 p-2">Explore more stories
-                  </text>
+                  <text className="fs-5 p-2">Explore more stories</text>
                 </div>
               </div>
             </div>
@@ -47,7 +46,6 @@ function App() {
             </div>
             <div className="container_p">
               <Profcards></Profcards>
-
             </div>
           </div>
           <hr className="border border-dark border-1 opacity-100 mb-0" />
@@ -56,7 +54,9 @@ function App() {
               <div className="hovr1 col-lg-5">
                 <div className="my-5 contactline-div">
                   <div className="d-flex justify-content-sm-between hovr">
-                    <div className="fs-5"><>Contacts</></div>
+                    <div className="fs-5">
+                      <>Contacts</>
+                    </div>
                     <div className="d-flex align-items-center ms-lg-5  margo">
                       <i className="fa-solid fa-greater-than arrow-footer"></i>
                     </div>

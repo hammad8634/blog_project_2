@@ -1,12 +1,38 @@
 .navbar-logo {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
+  margin-left: 7px;
 }
-.hovr1:hover {
+.navbar-container {
+  padding: 12px 90px 10px 90px;
+}
+
+.hovr2,
+.hover3 {
+  font-size: 20px;
+  color: black;
+  transform: scaleY(1.1);
+}
+.second-vr-line {
+  margin-top: 10px;
+}
+
+.hovrr1 {
+  font-size: 16px;
+  padding-top: 12px;
+  padding-left: 40px;
+}
+.search-icon-sm {
+  font-size: 26px;
+  /* position: absolute; */
+  /* display: contents; */
+}
+
+.hovrr1:hover {
   cursor: pointer;
   border-bottom: 2px solid blue;
 }
-.navbar-collapse{
+.navbar-collapse {
   font-size: 18px;
 }
 .hovr2:hover {
@@ -21,7 +47,6 @@
 }
 .navbar {
   transition: all 0.3s ease;
-  
 }
 
 .navbar {
@@ -31,7 +56,6 @@
 .hide {
   transform: translateY(-100%);
 }
-
 
 .navbar.scrolled {
   border-bottom: 1px solid #3c3939;
@@ -44,3 +68,112 @@
   transition: transform 0.3s ease, visibility 0.3s ease;
 }
 
+.strategy-menu,
+.dropdown-item {
+  padding: 15px 200px 0px 15px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.main-sub-heading {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.arrow {
+  font-size: 40px;
+  transform: scaleY(0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    padding: 12px 25px;
+  }
+  .search-snav {
+    display: flex;
+  }
+  .search-icon-sm {
+    padding: 0px 5px 2px 5px;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-container-2 {
+    display: none;
+  }
+  .dropdown-menu.show {
+    display: contents !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .search-snav {
+    display: none;
+  }
+}
+
+/*Snavbar css*/
+.worldwide-button {
+  display: flex;
+}
+.worldwide-text {
+  font-size: 16px;
+  margin-left: 18px;
+  font-weight: 100;
+  margin-top: 2px;
+}
+
+.globe-icon {
+  line-height: 1.5;
+  margin-left: 10px;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.cross-icon {
+  font-size: 26px;
+  margin: 4px 15px 0px 0px;
+}
+
+.dropdown-main-menus,
+.nav-linkss {
+  /* line-height: 1; */
+  font-size: 21px !important;
+  font-weight: 500;
+  opacity: 0.9;
+  padding: 12px 15px 12px 10px;
+  transform: scaleY(1.15);
+  letter-spacing: 0.8px;
+}
+
+.dropdown-icon {
+  font-size: 12px;
+  transform: scaleX(1.1);
+}
+
+.dropdown-menu-div {
+  border-left: 0.1px solid rgb(224, 224, 224);
+}
+.dropdown-menu-border {
+  padding-left: 12px;
+}
+
+.dropdown-item-one {
+  padding-left: 13px;
+  line-height: 2.2;
+}
+
+.explore-button {
+  font-weight: bold;
+  line-height: 1;
+  font-size: 18px !important;
+  font-weight: 500;
+  padding: 16px 10px 20px 10px;
+  transform: scaleY(1.1);
+  letter-spacing: 0.8px;
+}
+
+.explore-icon {
+  padding-left: 14px;
+  transform: scaleX(1.4);
+}

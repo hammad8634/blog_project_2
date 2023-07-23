@@ -1,4 +1,3 @@
-  
 .grad-color {
   background: linear-gradient(to right, white, rgb(248, 227, 230));
 }
@@ -11,13 +10,11 @@
   padding: 0px 80px;
 }
 
-
-
-.explore-btn{
-  background-color: #0B41CD !important;
+.explore-btn {
+  background-color: #0b41cd !important;
   padding: 14px 24px;
 }
-.explore-btn:hover{
+.explore-btn:hover {
   background-color: #052066 !important;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
@@ -38,12 +35,11 @@ button {
   background-color: #fff7f5;
   padding: 10px;
 }
-.hovr{
-  font-weight:400
-
+.hovr {
+  font-weight: 400;
 }
 
-.share-value{
+.share-value {
   font-weight: 400;
 }
 
@@ -69,10 +65,9 @@ button {
   opacity: 0.8;
 }
 
-.arrow-footer{
+.arrow-footer {
   font-size: 9px !important;
   transform: scaleY(2);
-  
 }
 
 .grad {
@@ -90,7 +85,6 @@ button {
   }
 }
 
-
 @media (min-width: 198px) and (max-width: 242px) {
   .margo {
     margin-left: 5rem;
@@ -107,18 +101,16 @@ button {
     padding-left: 5rem;
     padding-right: 5rem;
   }
-  
 }
 
 @media screen and (max-width: 1024px) {
   .container_p {
     padding: 0px 20px;
   }
-  
 }
 
 .grad-color {
-  background: linear-gradient(to bottom, white,#fac9b5);
+  background: linear-gradient(to bottom, white, #fac9b5);
 }
 
 .container12 {
@@ -126,7 +118,6 @@ button {
   flex-direction: column;
   height: 100vh;
 }
-
 
 @media screen and (max-width: 786px) {
   .container_e {

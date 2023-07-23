@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { displayAction } from "../Store/DisplayNav";
+import { BsArrowRightShort } from "react-icons/bs";
+import { AiOutlineSearch } from "react-icons/ai";
 import "./Navbar.css";
 
 const Navbar = () => {
-
-
   const [show, setShow] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlNavbar = () => {
-    if (typeof window !== 'undefined') {
-      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
         setShow(true);
-      } else { // if scroll up show the navbar
+      } else {
         setShow(false);
       }
 
@@ -22,12 +22,11 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
 
-      // cleanup function
       return () => {
-        window.removeEventListener('scroll', controlNavbar);
+        window.removeEventListener("scroll", controlNavbar);
       };
     }
   }, [lastScrollY]);
@@ -36,7 +35,6 @@ const Navbar = () => {
   const showNavHandler = () => {
     dispatch(displayAction.displayNav());
   };
-
   const [scrolled, setScrolled] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [navbarVisible, setNavbarVisible] = useState(true);
@@ -104,11 +102,14 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
-        className={`active ${show && 'hidden'} navbar navbar-expand-lg navbar-light bg-transparent pt-4 navbar sticky-top ${scrolled ? "scrolled" : ""
+      <div className={`navbar-container ${navbarVisible ? "" : "hidden"}`}>
+        <nav
+          className={`navbar-container-1 active ${
+            show && "hidden"
+          } navbar navbar-expand-lg navbar-light bg-transparent sticky-top ${
+            scrolled ? "scrolled" : ""
           } `}
-      >
-        <div className="container">
+        >
           <a className="navbar-brand" href="/">
             <img
               src="./images/log.png"
@@ -116,23 +117,36 @@ const Navbar = () => {
               className="img-fluid navbar-logo"
             />
           </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            onClick={showNavHandler}
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
 
-          <div className="collapse navbar-collapse col-4" id="navbarNav">
+          <div className="search-snav ">
+            <div className="search-icon-sm">
+              <AiOutlineSearch />
+            </div>
+
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              onClick={showNavHandler}
+              style={{ border: "none" }}
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <div className="collapse navbar-collapse " id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item hovr2">
                 <a className="nav-link active" aria-current="page" href="/">
+                  Media
+                </a>
+              </li>
+              <li className="nav-item ms-4 hovr2">
+                <a className="nav-link active" href="/">
                   Investors
                 </a>
               </li>
@@ -141,187 +155,218 @@ const Navbar = () => {
                   Career
                 </a>
               </li>
-              <li className="nav-item ms-4 hovr2">
-                <a className="nav-link active" href="/">
-                  Media
-                </a>
-              </li>
-              <div className="d-flex mt-2 ms-3" style={{ height: "25px" }}>
+              <div className="d-flex mt-3 ms-4" style={{ height: "20px" }}>
                 <div className="vr"></div>
               </div>
-              <li className="nav-item ms-4 pt-2 hovr1">
+              <li className="nav-item  hovrr1">
                 <i className="fa-solid fa-globe"></i>
               </li>
-              <li className="nav-item ms-4 pt-2">
-                <i className="fa-solid fa-magnifying-glass hovr1 pb-2"></i>
+              <li className="nav-item hovrr1">
+                <i className="fa-solid fa-magnifying-glass  "></i>
               </li>
             </ul>
           </div>
+        </nav>
 
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li
-                className="nav-item dropdown"
-                onMouseEnter={handleAboutRocheHover}
-                onMouseLeave={handleAboutRocheLeave}
-              >
-                <a
-                  className="nav-link dropdown-toggle hovr3 fs-6"
-                  href="/"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  aria-expanded={aboutRocheOpen ? "true" : "false"}
+        <div className="navbar-container-2">
+          <nav
+            className={` active ${
+              show && "hidden"
+            } navbar navbar-expand-lg  navbar-light bg-transparent pt-3 navbar sticky-top ${
+              scrolled ? "scrolled" : ""
+            } `}
+          >
+            <div className="d-flex " id="navbarNav">
+              <ul className="navbar-nav  ms-auto">
+                <li
+                  className="nav-item dropdown "
+                  onMouseEnter={handleAboutRocheHover}
+                  onMouseLeave={handleAboutRocheLeave}
                 >
-                  <b> About Roche</b>{" "}
-                </a>
-                <ul
-                  className={`dropdown-menu shadow border-0 overflow-auto ${aboutRocheOpen ? "show" : ""
+                  <a
+                    className="nav-link hovr3 fs-6 "
+                    href="/"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    aria-expanded={aboutRocheOpen ? "true" : "false"}
+                  >
+                    <text className="hover3"> About Roche</text>
+                  </a>
+                  <ul
+                    className={`dropdown-menu shadow border-0 overflow-auto ${
+                      aboutRocheOpen ? "show" : ""
                     }`}
-                  aria-labelledby="navbarDropdownMenuLink"
-                // style={{ position: "absolute", zIndex: "9999" }}
+                    aria-labelledby="navbarDropdownMenuLink"
+                    // style={{ position: "absolute", zIndex: "9999" }}
+                  >
+                    <div className="aboutRoche-dropdown-menu strategy-menu">
+                      <li>
+                        <a className="dropdown-item " href="/">
+                          <text className="my-3 main-sub-heading">
+                            About Roche
+                            <BsArrowRightShort className="arrow" />
+                          </text>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          Strategy
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3 " href="/">
+                          Business
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          Sustainability
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          Leadership
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          Governance
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          History
+                        </a>
+                      </li>
+                    </div>
+                  </ul>
+                </li>
+                <li
+                  className="nav-item dropdown"
+                  onMouseEnter={handleSolutionsHover}
+                  onMouseLeave={handleSolutionsLeave}
                 >
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Strategy
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Business
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Sustainability
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Leadership
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Governance
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      History
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li
-                className="nav-item dropdown"
-                onMouseEnter={handleSolutionsHover}
-                onMouseLeave={handleSolutionsLeave}
-              >
-                <a
-                  className="nav-link dropdown-toggle ms-5 hovr3"
-                  href="/"
-                  id="navbarDropdownMenuLink2"
-                  role="button"
-                  aria-expanded={solutionsOpen ? "true" : "false"}
-                >
-                  <b>Solutions</b>
-                </a>
-                <ul
-                  className={`dropdown-menu shadow border-0 ${solutionsOpen ? "show" : ""
+                  <a
+                    className="nav-link ms-4 hovr3"
+                    href="/"
+                    id="navbarDropdownMenuLink2"
+                    role="button"
+                    aria-expanded={solutionsOpen ? "true" : "false"}
+                  >
+                    <text className="hover3"> Solutions</text>
+                  </a>
+                  <ul
+                    className={`dropdown-menu shadow border-0 overflow-auto ${
+                      solutionsOpen ? "show" : ""
                     }`}
-                  aria-labelledby="navbarDropdownMenuLink"
-                // style={{ position: "absolute", zIndex: "9999" }}
+                    aria-labelledby="navbarDropdownMenuLink"
+                    // style={{ position: "absolute", zIndex: "9999" }}
+                  >
+                    <div className="aboutRoche-dropdown-menu strategy-menu">
+                      <li>
+                        <a className="dropdown-item " href="/">
+                          <text className="my-3 main-sub-heading">
+                            Solutions
+                            <BsArrowRightShort className="arrow" />
+                          </text>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          Focus areas
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          Pharma solution
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          Diagnostic solution
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          Pipeline
+                        </a>
+                      </li>
+                    </div>
+                  </ul>
+                </li>
+                <li
+                  className="nav-item dropdown"
+                  onMouseEnter={handleInnovationHover}
+                  onMouseLeave={handleInnovationLeave}
                 >
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Solutions
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Focus areas
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Pharma solution
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Diagnostic solution
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Pipeline
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li
-                className="nav-item dropdown"
-                onMouseEnter={handleInnovationHover}
-                onMouseLeave={handleInnovationLeave}
-              >
-                <a
-                  className="nav-link dropdown-toggle ms-5 hovr3"
-                  href="/"
-                  id="navbarDropdownMenuLink3"
-                  role="button"
-                  aria-expanded={innovationOpen ? "true" : "false"}
-                >
-                  <b>Innovation</b>
-                </a>
-                <ul
-                  className={`dropdown-menu shadow border-0 active ${innovationOpen ? "show" : ""
+                  <a
+                    className="nav-link ms-4 hovr3"
+                    href="/"
+                    id="navbarDropdownMenuLink3"
+                    role="button"
+                    aria-expanded={innovationOpen ? "true" : "false"}
+                  >
+                    <text className="hover3">Innovation</text>
+                  </a>
+                  <ul
+                    className={`dropdown-menu shadow border-0 active overflow-auto ${
+                      innovationOpen ? "show" : ""
                     }`}
-                  aria-labelledby="navbarDropdownMenuLink"
-                // style={{ position: "absolute", zIndex: "9999" }}
+                    aria-labelledby="navbarDropdownMenuLink"
+                    // style={{ position: "absolute", zIndex: "9999" }}
+                  >
+                    <div className="aboutRoche-dropdown-menu strategy-menu">
+                      <li>
+                        <a className="dropdown-item " href="/">
+                          <text className="my-3 main-sub-heading">
+                            Innovation
+                            <BsArrowRightShort className="arrow" />
+                          </text>
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          Team & Structure
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          Innovation process
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          Ethical standards
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item my-3" href="/">
+                          Partnering
+                        </a>
+                      </li>
+                    </div>
+                  </ul>
+                </li>
+                <div
+                  className="d-flex ms-4 second-vr-line"
+                  style={{ height: "25px" }}
                 >
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Innovation
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Team & Structure
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Innovation process
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Ethical standards
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Partnering
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <div className="d-flex mt-2 ms-5" style={{ height: "25px" }}>
-                <div className="vr"></div>
-              </div>
-              <li className="nav-item ms-5">
-                <a
-                  className="nav-link active hovr3"
-                  aria-current="page"
-                  href="/"
-                >
-                  Stories
-                </a>
-              </li>
-            </ul>
-          </div>
+                  <div className="vr"></div>
+                </div>
+                <li className="nav-item ms-4">
+                  <a
+                    className="nav-link active hovr3"
+                    aria-current="page"
+                    href="/"
+                  >
+                    <text className="hover3">Stories</text>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
-      </nav>
+      </div>
     </>
   );
 };
